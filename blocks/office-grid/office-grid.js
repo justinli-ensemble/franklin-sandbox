@@ -33,8 +33,6 @@ export default function decorate(block) {
                 a.href = "tel:" + phoneNumber.innerText;
                 a.innerHTML = phoneNumber.innerHTML
                 phoneNumber.parentNode.replaceChild(a, phoneNumber);
-
-
             }
         })
     })
