@@ -18,8 +18,6 @@ export default function decorate(block) {
                 }
             }
 
-            // This is such a fragile way of doing this?
-            // Whatever...for now
             const officeInfo = col.querySelectorAll('p');
             if (officeInfo.length > 0) {
                 const phoneNumber = officeInfo[0];
@@ -29,10 +27,8 @@ export default function decorate(block) {
                 phoneNumber.parentNode.insertBefore(wrapper, phoneNumber)
                 wrapper.appendChild(phoneNumber);
 
-                const a = document.createElement('a');
-                a.href = "tel:" + phoneNumber.innerText;
-                a.innerHTML = phoneNumber.innerHTML
-                phoneNumber.parentNode.replaceChild(a, phoneNumber);
+                const links = col.querySelectorAll('a');
+                links.forEach(link => link.classList.remove('button'))
             }
         })
     })

@@ -1,3 +1,8 @@
+.office-grid-container > .default-content-wrapper > h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .office-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -5,6 +10,7 @@
     margin: auto;
     grid-template-rows: repeat(2, minmax(0,1fr));
     row-gap: 60px;
+    margin-bottom: 160px;
 }
 
 @media (min-width: 640px) {
@@ -14,6 +20,8 @@
         column-gap: 20px;
     }
 }
+
+.office-grid h2 { font-size: var(--heading-font-size-l) }
 
 .office-grid > .office.card {
     width: 100%;

@@ -17,7 +17,7 @@
   --tel-color: #000;
   --background-color: #fff;
   --overlay-background-color: #eee;
-  --highlight-background-color: #ccc;
+  --highlight-background-color: #eff3f4;
   --text-color: #000;
 
   /* fonts */
@@ -54,8 +54,8 @@
 @media (min-width: 900px) {
   :root {
     --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 18px;
-    --heading-font-size-l: 36px;
+    --heading-font-size-xl: 32px;
+    --heading-font-size-l: 18px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
     --heading-font-size-xs: 22px;
@@ -137,6 +137,16 @@ a[href^="tel:"] {
 a[href^="tel:"]:hover {
   text-decoration: none;
   color: var(--tel-color);
+}
+
+a[href^="mailto:"] {
+  --tw-text-opacity: 1;
+  color: rgba(0,82,115,var(--tw-text-opacity));
+}
+
+a[href^="mailto:"]:hover {
+  text-decoration: none;
+  color: rgba(0,82,115,var(--tw-text-opacity));
 }
 
 a:hover {
@@ -232,10 +242,6 @@ main img {
 .icon svg {
   height: 100%;
   width: 100%;
-}
-
-main .section {
-  padding: 64px 2px;
 }
 
 @media (min-width: 1025) {

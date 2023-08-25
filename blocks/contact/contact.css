@@ -1,33 +1,33 @@
-.contact > ul {
-  list-style: none;
+.contact-container {
   margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-  grid-gap: 16px;
+  padding-top: 0;
+  padding-bottom: 80px;
 }
 
-.contact > ul > li {
-  border: none;
-  background-color: var(--background-color)
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact .contact-card-body {
-  margin: 16px;
-}
-
-.contact .contact-card-image {
-  line-height: 0;
+.contact-row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact .contact-card-body > *:first-child {
-  margin-top: 0;
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  width: 284px;
 }
 
-.contact > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.contact-title {
+  --tw-text-opacity: 1;
+    color: rgba(72,72,72,var(--tw-text-opacity));
 }

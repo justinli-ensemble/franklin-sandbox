@@ -1,17 +1,18 @@
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
-  /* change to ul, li */
-  const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
-    const li = document.createElement('li');
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      if (div.querySelector('picture')) div.className = 'contact-card-image';
-      else div.className = 'contact-card-body';
-    });
-    ul.append(li);
+    row.classList.add('contact-row');
+    [...row.children].forEach((col) => {
+      const contactInfo = col.querySelectorAll('p');
+      const contactInfoWrapper = contactInfo[0].closest('div');
+      contactInfoWrapper.classList.add('contact-item');
+
+      contactInfo[0].classList.add('contact-name');
+      contactInfo[1].classList.add('contact-title');
+      contactInfo[2].classList.add('contact-email');
+      contactInfo[2].classList.remove('button-container');
+      contactInfo[2].querySelector('a').classList.remove('button');
+    })
   });
-  block.textContent = '';
-  block.append(ul);
 }
