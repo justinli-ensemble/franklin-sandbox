@@ -1,4 +1,4 @@
-.cards > ul {
+.contact > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,26 +7,26 @@
   grid-gap: 16px;
 }
 
-.cards > ul > li {
+.contact > ul > li {
   border: none;
   background-color: var(--background-color)
 }
 
-.cards .cards-card-body {
+.contact .contact-card-body {
   margin: 16px;
 }
 
-.cards .cards-card-image {
+.contact .contact-card-image {
   line-height: 0;
   display: flex;
   flex-direction: row;
 }
 
-.cards .cards-card-body > *:first-child {
+.contact .contact-card-body > *:first-child {
   margin-top: 0;
 }
 
-.cards > ul > li img {
+.contact > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
