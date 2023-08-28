@@ -1,0 +1,57 @@
+.email-banner {
+    padding-top: 100px;
+    padding-bottom: 160px;
+}
+
+.email-banner .text {
+    text-align: center;
+}
+
+.email-banner .text > h2 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.email-banner .text > p {
+    margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+    .email-banner .text > h2 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .email-banner .text > p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.email-banner .button-container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.email-banner .button-container > a {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255,142,47,var(--tw-bg-opacity));
+    border-radius: 0.25rem;
+    border-width: 1px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-duration: 0.2s;
+}
+
+.email-banner .button-container > a:hover {
+    color: #000;
+    background-color: #FFF;
+    border-color: #000;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-duration: 0.2s;
+}
