@@ -14,12 +14,16 @@ export default async function decorate(block) {
 
   if (resp.ok) {
     const html = await resp.text();
+    block.innerHTML = html;
 
-    // decorate footer DOM
-    const footer = document.createElement('div');
-    footer.innerHTML = html;
-
-    decorateIcons(footer);
-    block.append(footer);
+    block.children[0].classList.add('footer-content');
+    const content = block.getElementsByClassName('content')[0];
+    content.children[0].classList.add('first-row');
+    content.children[0].children[3].classList.add('policies');
+    content.children[1].classList.add('second-row');
+    content.children[1].children[0].classList.add('ensemble-logo');
+    content.children[1].children[1].classList.add('linked-in');
+    content.children[1].children[2].classList.add('spacer');
+    content.children[1].children[3].classList.add('ensemble-copyright');
   }
 }

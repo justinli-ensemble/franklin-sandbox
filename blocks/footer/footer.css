@@ -1,14 +1,86 @@
-footer {
-  padding: 2rem;
-  background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
+.footer > .footer-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: .875rem;
+  line-height: 1.25rem;
 }
 
-footer .footer {
-  max-width: 1200px;
+.footer-content > .background-image {
+  width: 100%;
+  height: 100%;
+  object-position: left;
+  object-fit: cover;
+  position: absolute;
+  overflow: clip;
+  z-index: 1;
+}
+
+.background-image img {
+  width: 100%;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.footer-content > .content {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 235px;
+  padding-right: 235px;
+  z-index: 99;
+  max-width: 1400px;
   margin: auto;
 }
 
-footer .footer p {
-  margin: 0;
+.content > .first-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+}
+
+.first-row > .policies {
+  text-align: right;
+}
+
+.first-row h2 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.first-row p {
+  --tw-space-y-reverse: 0;
+  margin-bottom: calc(20px*var(--tw-space-y-reverse));
+  margin-top: calc(20px*(1 - var(--tw-space-y-reverse)));
+}
+
+.content > .second-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  --tw-space-y-reverse: 0;
+  margin-bottom: calc(60px*var(--tw-space-y-reverse));
+  margin-top: calc(60px*(1 - var(--tw-space-y-reverse)));
+  width: 100%;
+}
+
+.second-row div {
+  align-self: flex-end;
+}
+
+.second-row .linked-in img {
+  height: 36px;
+  width: auto;
+}
+
+.second-row .ensemble-copyright {
+  text-align: right;
 }
