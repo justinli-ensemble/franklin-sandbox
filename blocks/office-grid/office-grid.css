@@ -3,6 +3,10 @@
     margin-bottom: 40px;
 }
 
+.office-grid-wrapper {
+    margin-top: 10px;
+}
+
 .office-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
